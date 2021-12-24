@@ -199,7 +199,7 @@ export interface ButtonProps {
     testId?: string;
     onClick(): void;
 }
-export class Button extends React.Component<ButtonProps> {}
+export class Button extends React.Component<ButtonProps,any> {}
 
 export class Menu extends React.Component {}
 
@@ -212,7 +212,7 @@ export interface MenuItemProps {
     testId?: string;
     onClick(): void;
 }
-export class MenuItem extends React.Component<MenuItemProps> {}
+export class MenuItem extends React.Component<MenuItemProps,any> {}
 
 export interface MinimalButtonProps {
     ariaLabel?: string;
@@ -222,25 +222,25 @@ export interface MinimalButtonProps {
     testId?: string;
     onClick(): void;
 }
-export class MinimalButton extends React.Component<MinimalButtonProps> {}
+export class MinimalButton extends React.Component<MinimalButtonProps,any> {}
 
 export interface PrimaryButtonProps {
     testId?: string;
     onClick(): void;
 }
-export class PrimaryButton extends React.Component<PrimaryButtonProps> {}
+export class PrimaryButton extends React.Component<PrimaryButtonProps,any> {}
 
 export interface ProgressBarProps {
     progress: number;
 }
-export class ProgressBar extends React.Component<ProgressBarProps> {}
+export class ProgressBar extends React.Component<ProgressBarProps,any> {}
 
 export class Separator extends React.Component {}
 
 export interface SpinnerProps {
     size?: string;
 }
-export class Spinner extends React.Component<SpinnerProps> {}
+export class Spinner extends React.Component<SpinnerProps,any> {}
 
 export interface SplitterSize {
     firstHalfPercentage: number;
@@ -251,7 +251,7 @@ export interface SplitterSize {
 export interface SplitterProps {
     constrain?(size: SplitterSize): boolean;
 }
-export class Splitter extends React.Component<SplitterProps> {}
+export class Splitter extends React.Component<SplitterProps,any> {}
 
 export interface TextBoxProps {
     ariaLabel?: string;
@@ -263,14 +263,14 @@ export interface TextBoxProps {
     onChange: (value: string) => void;
     onKeyDown?: (e: React.KeyboardEvent) => void;
 }
-export class TextBox extends React.Component<TextBoxProps> {}
+export class TextBox extends React.Component<TextBoxProps,any> {}
 
 export interface IconProps {
     // If this option is `true`, the icon will not be flipped
     ignoreDirection?: boolean;
     size?: number;
 }
-export class Icon extends React.Component<IconProps> {}
+export class Icon extends React.Component<IconProps,any> {}
 
 export interface ModalProps {
     ariaControlsSuffix?: string;
@@ -280,7 +280,7 @@ export interface ModalProps {
     isOpened?: boolean;
     target?: RenderTarget;
 }
-export class Modal extends React.Component<ModalProps> {}
+export class Modal extends React.Component<ModalProps,any> {}
 
 export interface PopoverProps {
     ariaControlsSuffix?: string;
@@ -292,7 +292,7 @@ export interface PopoverProps {
     position: Position;
     target?: RenderTarget;
 }
-export class Popover extends React.Component<PopoverProps> {}
+export class Popover extends React.Component<PopoverProps,any> {}
 
 export type RenderTooltipContent = () => React.ReactNode;
 export interface TooltipProps {
@@ -302,7 +302,7 @@ export interface TooltipProps {
     position: Position;
     target: React.ReactElement;
 }
-export class Tooltip extends React.Component<TooltipProps> {}
+export class Tooltip extends React.Component<TooltipProps,any> {}
 
 // Store
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -327,7 +327,7 @@ export interface LocalizationContextProps {
     l10n: LocalizationMap;
     setL10n(l10n: LocalizationMap): void;
 }
-export const LocalizationContext: React.Context<LocalizationContextProps>;
+export const LocalizationContext: React.Context<LocalizationContextProps,any>;
 
 export enum TextDirection {
     RightToLeft = 'RTL',
@@ -338,7 +338,7 @@ export interface ThemeContextProps {
     direction?: TextDirection;
     setCurrentTheme: (theme: string) => void;
 }
-export const ThemeContext: React.Context<ThemeContextProps>;
+export const ThemeContext: React.Context<ThemeContextProps,any>;
 
 // Viewer
 // The character maps that can be downloaded from
@@ -423,12 +423,12 @@ export interface ViewerProps {
     onSwitchTheme?(theme: string): void;
     onZoom?(e: ZoomEvent): void;
 }
-export class Viewer extends React.Component<ViewerProps> {}
+export class Viewer extends React.Component<ViewerProps,any> {}
 
 export interface WorkerProps {
     workerUrl: string;
 }
-export class Worker extends React.Component<WorkerProps> {}
+export class Worker extends React.Component<WorkerProps,any> {}
 
 // Hooks
 export interface UseIntersectionObserverProps {
